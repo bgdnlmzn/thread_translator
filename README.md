@@ -36,13 +36,18 @@ Thread Translator — это веб-приложение для перевода
     YANDEX_FOLDER_ID=YourYandexFolderId
     YANDEX_TOKEN=YourYandexToken
    ```
-3. Соберите и запустите контейнеры с помощью Docker Compose:
+3. Соберите проект с помощью Gradle:
+   ```bash
+   ./gradlew build
+   ```
+4. Соберите и запустите контейнеры с помощью Docker Compose:
    ```bash
     docker-compose up --build
    ```
 ### Приложение будет доступно по адресу: http://localhost:8080.
 
 ### Пример запроса:
+POST http://localhost:8080/api/translate
  ```json
     {
     "inputText": "Привет!",
@@ -56,13 +61,14 @@ Thread Translator — это веб-приложение для перевода
     "translatedText": "Hello!"
 }
 ```
-inputText - текст, который нужно перевести
 
-sourceLang - исходный язык
+`inputText` - текст, который нужно перевести
 
-targetLang - целевой язык
+`sourceLang` - исходный язык
 
-translatedText - переведенный текст
+`targetLang`- целевой язык
+
+`translatedText` - переведенный текст
 
 Этот проект использует PostgreSQL в качестве базы данных, которая развернута в Docker контейнере. Приложение автоматически применяет миграции базы данных с использованием Flyway.
 ### Создание токена Yandex

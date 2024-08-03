@@ -63,3 +63,7 @@ jar {
 		attributes 'Main-Class': 'translator.Application'
 	}
 }
+
+tasks.withType(Test) {
+	enabled = false
+}

@@ -31,7 +31,7 @@ Thread Translator — это веб-приложение для перевода
    cd thread_translator
    ```
 
-2. Создайте файл .env в корне проекта и добавьте ваши значения для YANDEX_FOLDER_ID и YANDEX_TOKEN:
+2. Измените файл .env в корне проекта и добавьте ваши значения для YANDEX_FOLDER_ID и YANDEX_TOKEN:
     ```dotenv
     YANDEX_FOLDER_ID=YourYandexFolderId
     YANDEX_TOKEN=YourYandexToken
@@ -78,4 +78,4 @@ translatedText - переведенный текст
 
 5. Сохраните YANDEX_FOLDER_ID и YANDEX_TOKEN и добавьте их в файл .env
 ### Более подробно о получении токена:
-https://yandex.cloud/ru/docs/translate/
+https://yandex.cloud/ru/docs/translate/operations/sa-api-key

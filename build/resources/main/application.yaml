@@ -1,0 +1,18 @@
+server:
+    port: 8080
+yandex:
+    folderId: ${YANDEX_FOLDER_ID}
+    apiKey: ${YANDEX_TOKEN}
+
+spring:
+    datasource:
+        # По умолчанию postgresql имеет 5432 порт. Но так как подразумевается запуск через docker-compose, указан порт
+        # из docker-compose.yaml для корректной проброски. Если у вас локально установлен postgresql и вы собираетесь
+        # использовать его, то требуется поменить его на нужный
+        url: jdbc:postgresql://localhost:5430/translator
+        username: translator
+        password: translator
+    flyway:
+        enabled: true
+        locations:
+            - db.migration

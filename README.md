@@ -24,13 +24,11 @@ Thread Translator — это веб-приложение для перевода
 
 ### Шаги для запуска
 
- 1. Клонируйте репозиторий:
-
-   ```bash
+1. Клонируйте репозиторий::
+    ```bash
    git clone https://github.com/bgdnlmzn/thread_translator.git
    cd thread_translator
    ```
-
 2. Измените файл .env в корне проекта и добавьте ваши значения для YANDEX_FOLDER_ID и YANDEX_TOKEN:
     ```dotenv
     YANDEX_FOLDER_ID=YourYandexFolderId
